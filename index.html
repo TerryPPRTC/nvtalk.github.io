@@ -15,8 +15,9 @@
       <p class="project-tagline">Audio-Driven Talking Head Generation</p>
       <p class="project-desc">
         Given a single portrait image and an audio clip, NVTalk synthesizes a
-        realistic, lip-synced talking-head video — inspired by
-        <strong>VASA-1</strong>, <strong>LivePortrait</strong>, and
+        realistic, lip-synced talking-head video with controllable
+        <strong>facial expressions</strong> and <strong>gaze direction</strong> —
+        inspired by <strong>VASA-1</strong>, <strong>LivePortrait</strong>, and
         <strong>Ditto</strong>.
       </p>
       <div class="hero-buttons">
@@ -28,6 +29,39 @@
       </div>
     </div>
   </header>
+
+  <!-- ===== ABSTRACT ===== -->
+  <section class="abstract">
+    <div class="container narrow">
+      <h2>Abstract</h2>
+      <p>
+        NVTalk is an audio-driven talking-head framework that generates
+        photo-realistic, temporally coherent facial animations from a single
+        still image and an arbitrary speech audio. Beyond lip synchronization,
+        NVTalk supports controllable <strong>facial expressions</strong> and
+        <strong>gaze direction</strong>, enabling expressive and natural-looking
+        talking-head synthesis. The model disentangles identity, head pose,
+        lip motion, and emotion, allowing fine-grained independent control
+        over each component.
+      </p>
+      <p style="margin-top:1rem;">
+        A key distinction from prior work such as Ditto is NVTalk's
+        <strong>250 ms pose prediction window</strong>, which significantly
+        reduces latency and enables true <strong>real-time streaming</strong>
+        inference — making it suitable for live interactive applications.
+        Building upon the advances of VASA-1, LivePortrait, and Ditto,
+        NVTalk introduces a unified pipeline that achieves high visual fidelity
+        with minimal end-to-end delay.
+      </p>
+      <p style="margin-top:1rem;">
+        <strong>Current project status:</strong> The model is under active
+        development. Ongoing work includes expanding the training data
+        (potentially incorporating singing videos for broader vocal coverage),
+        and optimizing the inference backend with <strong>TensorRT</strong>
+        support for further latency reduction and deployment efficiency.
+      </p>
+    </div>
+  </section>
 
   <!-- ===== DEMO ===== -->
   <section class="demo-section" id="demo">
@@ -98,23 +132,6 @@
     </div>
   </section>
 
-  <!-- ===== ABSTRACT ===== -->
-  <section class="abstract">
-    <div class="container narrow">
-      <h2>Abstract</h2>
-      <p>
-        NVTalk is an audio-driven talking-head framework that generates
-        photo-realistic, temporally coherent facial animations from a single
-        still image and an arbitrary speech audio. The model disentangles
-        identity, head pose, and lip motion, enabling fine-grained control
-        over the synthesized video. Building upon the advances of
-        VASA-1 (diffusion-based holistic motion), LivePortrait
-        (retargeting-based portrait animation), and Ditto
-        (identity-preserving talking head), NVTalk introduces a unified
-        pipeline that achieves high fidelity with low inference latency.
-      </p>
-    </div>
-  </section>
 
   <!-- ===== METHOD ===== -->
   <section class="method">
@@ -156,31 +173,42 @@
         <div class="card">
           <span class="card-icon">&#128172;</span>
           <h3>Accurate Lip Sync</h3>
-          <p>Phoneme-level alignment between speech audio and lip motion.</p>
+          <p>Phoneme-level alignment between speech audio and lip motion, supporting both speech and singing.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">&#128064;</span>
+          <h3>Controllable Gaze &amp; Expression</h3>
+          <p>Independent control over gaze direction and facial expressions for natural, expressive output.</p>
         </div>
         <div class="card">
           <span class="card-icon">&#129710;</span>
           <h3>Identity Preservation</h3>
-          <p>Maintains the subject's appearance across all generated frames.</p>
+          <p>Maintains the subject's appearance and fine facial details across all generated frames.</p>
         </div>
         <div class="card">
-          <span class="card-icon">&#127917;</span>
-          <h3>Expressive Motion</h3>
-          <p>Natural head pose, blinks, and micro-expressions.</p>
+          <span class="card-icon">&#9201;</span>
+          <h3>250 ms Pose Window</h3>
+          <p>Reduced pose prediction window of just 250 ms enables true real-time streaming with minimal latency — a key advantage over Ditto.</p>
         </div>
         <div class="card">
           <span class="card-icon">&#9889;</span>
-          <h3>Fast Inference</h3>
-          <p>Real-time capable pipeline optimized for GPU inference.</p>
+          <h3>Real-Time Streaming</h3>
+          <p>End-to-end pipeline designed for live interactive applications, with ongoing TensorRT optimization for deployment efficiency.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">&#127381;</span>
+          <h3>Singing Support</h3>
+          <p>Generalizes beyond speech to singing synthesis, with training data expansion planned for broader vocal coverage.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== RELATED WORK ===== -->
+  <!-- ===== ACKNOWLEDGEMENTS ===== -->
   <section class="related" id="paper">
     <div class="container">
-      <h2>Related Work</h2>
+      <h2>Acknowledgements</h2>
+      <p class="ack-intro">NVTalk is built upon and inspired by the following outstanding works. We sincerely thank the authors for their open research.</p>
       <div class="related-list">
         <div class="related-item">
           <h3>VASA-1</h3>
@@ -216,7 +244,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&#169; 2024 NVTalk Authors &nbsp;|&nbsp;
+    <p>&#169; 2026 NVTalk Authors &nbsp;|&nbsp;
       <a href="https://github.com/TerryPPRTC/nvtalk.github.io" target="_blank">GitHub</a>
     </p>
   </footer>

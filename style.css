@@ -303,6 +303,16 @@ section {
   margin-bottom: 0.8rem;
 }
 
+.ack-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== CITATION ===== */
 .citation pre {
   background: var(--bg2);
@@ -445,10 +455,12 @@ footer a { color: var(--accent); }
 .video-item video {
   width: 512px;
   max-width: 100%;
+  max-height: 512px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: #000;
   display: block;
+  object-fit: contain;
 }
 
 .video-caption {
