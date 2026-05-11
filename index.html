@@ -38,18 +38,15 @@
         NVTalk is an audio-driven talking-head framework that generates
         photo-realistic, temporally coherent facial animations from a single
         still image and an arbitrary speech audio. Beyond lip synchronization,
-        NVTalk supports controllable <strong>facial expressions</strong> and
+        NVTalk supports controllable <strong>facial expressions</strong> by emotions and
         <strong>gaze direction</strong>, enabling expressive and natural-looking
-        talking-head synthesis. The model disentangles identity, head pose,
-        lip motion, and emotion, allowing fine-grained independent control
-        over each component.
+        talking-head synthesis.
       </p>
       <p style="margin-top:1rem;">
         A key distinction from prior work such as Ditto is NVTalk's
         <strong>250 ms pose prediction window</strong>, which significantly
         reduces latency and enables true <strong>real-time streaming</strong>
         inference — making it suitable for live interactive applications.
-        Building upon the advances of VASA-1, LivePortrait, and Ditto,
         NVTalk introduces a unified pipeline that achieves high visual fidelity
         with minimal end-to-end delay.
       </p>
@@ -57,7 +54,7 @@
         <strong>Current project status:</strong> The model is under active
         development. Ongoing work includes expanding the training data
         (potentially incorporating singing videos for broader vocal coverage),
-        and optimizing the inference backend with <strong>TensorRT</strong>
+        and optimizing the inference backend with <strong>TensorRT/ONNX</strong>
         support for further latency reduction and deployment efficiency.
       </p>
     </div>
@@ -74,13 +71,13 @@
           <span class="demo-badge badge-compare">Comparison</span>
           NVTalk vs. Ditto
         </h3>
-        <p class="demo-block-desc">Side-by-side comparison showing NVTalk's improved lip sync quality and identity preservation against Ditto.</p>
+        <p class="demo-block-desc">Side-by-side comparison showing NVTalk's improved lip sync quality and facial expressions against Ditto.</p>
         <div class="video-single">
           <video controls preload="metadata" poster="">
             <source src="examples/nvtalk_ditto1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <p class="video-caption">NVTalk vs. Ditto — lip sync &amp; identity comparison</p>
+          <p class="video-caption">NVTalk vs. Ditto — lip sync &amp; expressions comparison</p>
         </div>
       </div>
 
@@ -223,7 +220,7 @@
         <div class="related-item">
           <h3>Ditto</h3>
           <p>Motion-Space Diffusion for Controllable Realtime Talking Head Synthesis (2024)</p>
-          <a href="https://digital-avatar.github.io/ai/ditto/" target="_blank">Project Page &#8599;</a>
+          <a href="https://github.com/antgroup/ditto-talkinghead" target="_blank">Project Page &#8599;</a>
         </div>
       </div>
     </div>
