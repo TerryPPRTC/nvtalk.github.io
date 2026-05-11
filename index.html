@@ -29,13 +29,72 @@
     </div>
   </header>
 
-  <!-- ===== TEASER ===== -->
-  <section class="teaser" id="demo">
+  <!-- ===== DEMO ===== -->
+  <section class="demo-section" id="demo">
     <div class="container">
-      <h2>Teaser</h2>
-      <div class="video-placeholder">
-        <p>&#127916; Demo video coming soon</p>
+      <h2>Demo Results</h2>
+
+      <!-- Comparison with Ditto -->
+      <div class="demo-block">
+        <h3 class="demo-block-title">
+          <span class="demo-badge badge-compare">Comparison</span>
+          NVTalk vs. Ditto
+        </h3>
+        <p class="demo-block-desc">Side-by-side comparison showing NVTalk's improved lip sync quality and identity preservation against Ditto.</p>
+        <div class="video-single">
+          <video controls preload="metadata" poster="">
+            <source src="examples/nvtalk_ditto1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p class="video-caption">NVTalk vs. Ditto — lip sync &amp; identity comparison</p>
+        </div>
       </div>
+
+      <!-- Long-form demo -->
+      <div class="demo-block">
+        <h3 class="demo-block-title">
+          <span class="demo-badge badge-long">Long-form</span>
+          Extended Speech Demo
+        </h3>
+        <p class="demo-block-desc">Demonstrating temporal consistency and stable identity over a longer speech sequence.</p>
+        <div class="video-single">
+          <video controls preload="metadata">
+            <source src="examples/nazha_sonic.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p class="video-caption">Nezha portrait — extended speech synthesis</p>
+        </div>
+      </div>
+
+      <!-- Singing demos -->
+      <div class="demo-block">
+        <h3 class="demo-block-title">
+          <span class="demo-badge badge-sing">Singing</span>
+          Singing Synthesis
+        </h3>
+        <p class="demo-block-desc">NVTalk generalizes beyond speech to singing — showcasing expressive vocal animation across different characters.</p>
+        <div class="video-grid">
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="examples/song/nazha_sonicsong.mp4" type="video/mp4" />
+            </video>
+            <p class="video-caption">Nezha — Singing</p>
+          </div>
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="examples/song/lft_sonicsong.mp4" type="video/mp4" />
+            </video>
+            <p class="video-caption">Portrait — Singing</p>
+          </div>
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="examples/song/c_sonicsong(ckpt531300).mp4" type="video/mp4" />
+            </video>
+            <p class="video-caption">Character — Singing (ckpt 531300)</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
