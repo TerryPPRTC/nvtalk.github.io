@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NVTalk – Audio-Driven Talking Head</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="project-title">NVTalk</h1>
+      <p class="project-tagline">Audio-Driven Talking Head Generation</p>
+      <p class="project-desc">
+        Given a single portrait image and an audio clip, NVTalk synthesizes a
+        realistic, lip-synced talking-head video — inspired by
+        <strong>VASA-1</strong>, <strong>LivePortrait</strong>, and
+        <strong>Ditto</strong>.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="https://github.com/TerryPPRTC/nvtalk.github.io" target="_blank">
+          &#11088; GitHub
+        </a>
+        <a class="btn btn-secondary" href="#demo">Demo</a>
+        <a class="btn btn-secondary" href="#paper">Paper</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== TEASER ===== -->
+  <section class="teaser" id="demo">
+    <div class="container">
+      <h2>Teaser</h2>
+      <div class="video-placeholder">
+        <p>&#127916; Demo video coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABSTRACT ===== -->
+  <section class="abstract">
+    <div class="container narrow">
+      <h2>Abstract</h2>
+      <p>
+        NVTalk is an audio-driven talking-head framework that generates
+        photo-realistic, temporally coherent facial animations from a single
+        still image and an arbitrary speech audio. The model disentangles
+        identity, head pose, and lip motion, enabling fine-grained control
+        over the synthesized video. Building upon the advances of
+        VASA-1 (diffusion-based holistic motion), LivePortrait
+        (retargeting-based portrait animation), and Ditto
+        (identity-preserving talking head), NVTalk introduces a unified
+        pipeline that achieves high fidelity with low inference latency.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== METHOD ===== -->
+  <section class="method">
+    <div class="container">
+      <h2>Method Overview</h2>
+      <div class="pipeline">
+        <div class="step">
+          <div class="step-icon">&#128444;&#65039;</div>
+          <h3>Portrait Input</h3>
+          <p>Single reference image of any person</p>
+        </div>
+        <div class="arrow">&#8594;</div>
+        <div class="step">
+          <div class="step-icon">&#127897;&#65039;</div>
+          <h3>Audio Encoder</h3>
+          <p>Extracts speech features &amp; phoneme timing</p>
+        </div>
+        <div class="arrow">&#8594;</div>
+        <div class="step">
+          <div class="step-icon">&#129504;</div>
+          <h3>Motion Generator</h3>
+          <p>Predicts lip, head pose &amp; expression coefficients</p>
+        </div>
+        <div class="arrow">&#8594;</div>
+        <div class="step">
+          <div class="step-icon">&#127909;</div>
+          <h3>Video Renderer</h3>
+          <p>Synthesizes high-fidelity talking-head video</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HIGHLIGHTS ===== -->
+  <section class="highlights">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="card-icon">&#128172;</span>
+          <h3>Accurate Lip Sync</h3>
+          <p>Phoneme-level alignment between speech audio and lip motion.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">&#129710;</span>
+          <h3>Identity Preservation</h3>
+          <p>Maintains the subject's appearance across all generated frames.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">&#127917;</span>
+          <h3>Expressive Motion</h3>
+          <p>Natural head pose, blinks, and micro-expressions.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">&#9889;</span>
+          <h3>Fast Inference</h3>
+          <p>Real-time capable pipeline optimized for GPU inference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RELATED WORK ===== -->
+  <section class="related" id="paper">
+    <div class="container">
+      <h2>Related Work</h2>
+      <div class="related-list">
+        <div class="related-item">
+          <h3>VASA-1</h3>
+          <p>Microsoft Research — Lifelike Audio-Driven Talking Faces Generated in Real Time (2024)</p>
+          <a href="https://www.microsoft.com/en-us/research/project/vasa-1/" target="_blank">Project Page &#8599;</a>
+        </div>
+        <div class="related-item">
+          <h3>LivePortrait</h3>
+          <p>Efficient Portrait Animation with Stitching and Retargeting Control (2024)</p>
+          <a href="https://liveportrait.github.io/" target="_blank">Project Page &#8599;</a>
+        </div>
+        <div class="related-item">
+          <h3>Ditto</h3>
+          <p>Motion-Space Diffusion for Controllable Realtime Talking Head Synthesis (2024)</p>
+          <a href="https://digital-avatar.github.io/ai/ditto/" target="_blank">Project Page &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CITATION ===== -->
+  <section class="citation">
+    <div class="container narrow">
+      <h2>Citation</h2>
+      <pre><code>@misc{nvtalk2024,
+  title   = {NVTalk: Audio-Driven Talking Head Generation},
+  author  = {TerryPPRTC},
+  year    = {2024},
+  url     = {https://terrypprtc.github.io/nvtalk.github.io/}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&#169; 2024 NVTalk Authors &nbsp;|&nbsp;
+      <a href="https://github.com/TerryPPRTC/nvtalk.github.io" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+</body>
+</html>
